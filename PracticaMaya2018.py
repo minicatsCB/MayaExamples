@@ -1,8 +1,16 @@
 from maya import cmds
 cmds.file(new=True, f=True)
 
-player, _ = cmds.polyCube(w=4, h=2, d=2)
-cmds.setAttr(player + ".translate", 0, 0, 0)
+#player1, _ = cmds.polyCube(w=4, h=2, d=2)
+#cmds.setAttr(player1 + ".translate", 0, 0, 0)
+
+player2, _ = cmds.polyPyramid(w=1)
+cmds.setAttr(player2 + ".scale", 3, 3, 3)
+cmds.setAttr(player2 + ".rotate", 0, 0, -90)
+cmds.setAttr(player2 + ".translate", 0, 0, 0)
+cmds.select(player2)
+#cmds.setAttr(player2 + "rotateOrder", 5)
+cmds.makeIdentity(apply=True, t=1, r=1, s=1, n=0, pn=1)    # Put the local axis back to its original position
 
 # Create bounds
 cmds.curve(d=1, p=[(0,-10,-50), (100,-10,-50), (100,-10,50), (0,-10,50), (0,-10,-50)]) # Bottom face
@@ -13,5 +21,291 @@ cmds.curve(d=1, p=[(100,-10,50),(100,10,50)])    # Front-right edge
 cmds.curve(d=1, p=[((0,-10,50)),(0,10,50)])    # Back-right edge
 
 # Create obstacle circuit
-cube1, _ = cmds.polyCube(w=2, h=2, d=2)
-cmds.setAttr(cube1 + ".translate", 5, 0, 0)
+cube1, _ = cmds.polyCube(w=12, h=2, d=5)
+cmds.setAttr(cube1 + ".translate", 16, 0, 0)
+
+cube2, _ = cmds.polyCube(w=5, h=5, d=5)
+cmds.setAttr(cube2 + ".translate", 27, 0, -11)
+
+cube3, _ = cmds.polyCube(w=10, h=10, d=10)
+cmds.setAttr(cube3 + ".rotate", 0, 27, 0)
+cmds.setAttr(cube3 + ".translate", 20, 0, -25)
+
+cube4, _ = cmds.polyCube(w=10, h=3, d=3)
+cmds.setAttr(cube4 + ".translate", 38, 0, -5)
+
+cube5, _ = cmds.polyCube(w=5, h=3, d=35)
+cmds.setAttr(cube5 + ".translate", 51, 0, -19)
+
+cube6, _ = cmds.polyCube(w=13, h=3, d=4)
+cmds.setAttr(cube6 + ".translate",72, 0, -44)
+
+cube7, _ = cmds.polyCube(w=3, h=3, d=20)
+cmds.setAttr(cube7 + ".rotate", 0, -50, 0)
+cmds.setAttr(cube7 + ".translate", 77, 0, 30)
+
+cube8, _ = cmds.polyCube(w=7, h=7, d=23)
+cmds.setAttr(cube8 + ".translate", 94, 0, 2)
+
+cube9, _ = cmds.polyCube(w=3, h=3, d=3)
+cmds.setAttr(cube9 + ".translate", 27, 0, -4)
+
+cube10, _ = cmds.polyCube(w=6, h=6, d=6)
+cmds.setAttr(cube10 + ".rotate", 0, -25, 0)
+cmds.setAttr(cube10 + ".translate", 70, 0, -17)
+
+cube11, _ = cmds.polyCube(w=4, h=4, d=4)
+cmds.setAttr(cube11 + ".translate", 83, 0, 40)
+
+cube12, _ = cmds.polyCube(w=9, h=1, d=4)
+cmds.setAttr(cube12 + ".translate", 24, 0, 42)
+
+cube13, _ = cmds.polyCube(w=12, h=12, d=12)
+cmds.setAttr(cube13 + ".translate", 8, 0, 33)
+
+cube14, _ = cmds.polyCube(w=12, h=12, d=12)
+cmds.setAttr(cube14 + ".translate", 48, 0, 25)
+
+cube15, _ = cmds.polyCube(w=12, h=12, d=12)
+cmds.setAttr(cube15 + ".translate", 88, 0, -27)
+
+cube16, _ = cmds.polyCube(w=12, h=12, d=12)
+cmds.setAttr(cube16 + ".translate", 9, 0, -41)
+
+sphere1, _ = cmds.polySphere(r=3)
+cmds.setAttr(sphere1 + ".translate", 15, 0, -10)
+
+sphere2, _ = cmds.polySphere(r=5)
+cmds.setAttr(sphere2 + ".translate", 39, 0, 8)
+
+sphere3, _ = cmds.polySphere(r=4)
+cmds.setAttr(sphere3 + ".translate", 81, 0, -9)
+
+sphere4, _ = cmds.polySphere(r=4)
+cmds.setAttr(sphere4 + ".translate", 9, 0, 14)
+
+cylinder1, _ = cmds.polyCylinder(r=1, h=2)
+cmds.setAttr(cylinder1 + ".scale", 6, 3, 11)
+cmds.setAttr(cylinder1 + ".rotate", 0, 24, 0)
+cmds.setAttr(cylinder1 + ".translate", 23, 0, 21)
+
+cylinder2, _ = cmds.polyCylinder(r=1, h=2)
+cmds.setAttr(cylinder2 + ".scale", 6, 6, 6)
+cmds.setAttr(cylinder2 + ".translate", 69, 0, -30)
+
+torus1, _ = cmds.polyTorus(r=1, sr=0.5)
+cmds.setAttr(torus1 + ".scale", 5, 5, 5)
+cmds.setAttr(torus1 + ".translate", 77, 0, 11)
+
+torus2, _ = cmds.polyTorus(r=1, sr=0.5)
+cmds.setAttr(torus2 + ".scale", 5, 5, 5)
+cmds.setAttr(torus2 + ".translate", 30, 0, -39)
+
+torus3, _ = cmds.polyTorus(r=1, sr=0.5)
+cmds.setAttr(torus3 + ".scale", 3, 3, 3)
+cmds.setAttr(torus3 + ".translate", 60, 0, 38)
+
+cone1, _ = cmds.polyCone(r=1, h=2)
+cmds.setAttr(cone1 + ".scale", 6, 6, 6)
+cmds.setAttr(cone1 + ".translate", 39, 0, -22)
+
+cone2, _ = cmds.polyCone(r=1, h=2)
+cmds.setAttr(cone2 + ".scale", 4, 4, 4)
+cmds.setAttr(cone2 + ".translate", 39, 0, 40)
+
+cone3, _ = cmds.polyCone(r=1, h=2)
+cmds.setAttr(cone3 + ".scale", 5, 5, 5)
+cmds.setAttr(cone3 + ".translate", 62, 0, 24)
+
+pyramid1, _ = cmds.polyPyramid(w=1)
+cmds.setAttr(pyramid1 + ".scale", 7, 7, 7)
+cmds.setAttr(pyramid1 + ".translate", 51, 0, 10)
+
+pipe1, _ = cmds.polyPipe(r=2, h=2, t=0.5)
+cmds.setAttr(pipe1 + ".scale", 3, 16, 3)
+cmds.setAttr(pipe1 + ".rotate", -90, -10, 0)
+cmds.setAttr(pipe1 + ".translate", 64, 0, 1)
+
+helix1, _ = cmds.polyHelix(c=3, h=2, w=2, r=0.4)
+cmds.setAttr(helix1 + ".scale", 6, 6, 6)
+cmds.setAttr(helix1 + ".translate", 93, 0, 36)
+
+#gear1, _ = cmds.polyGear(s=16, r=1, ir=0.3, h=1, hd=10, gs=0.6, go=0.2, gt=0.5, gm=1.2, ta=1)
+#cmds.setAttr(gear1 + ".scale", 4, 4, 4)
+#cmds.setAttr(gear1 + ".translate", 9, 0, -15)
+
+# Animate the player movement
+#cmds.currentUnit(time="59.94fps")
+
+# First keygrame
+cmds.select(player2)
+cmds.currentTime(1)
+cmds.move(0, 0, 0)
+cmds.setKeyframe()
+
+# Second keyframe
+cmds.currentTime(10)
+cmds.move(7, 0, 0)
+cmds.rotate(0, 90, 0)
+cmds.setKeyframe()
+
+# Third keyframe
+cmds.currentTime(20)
+cmds.move(7, 0, -16)
+cmds.rotate(0, 0, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(30)
+cmds.move(20, 0, -16)
+cmds.rotate(0, 45, 0)
+cmds.setKeyframe()
+
+
+cmds.currentTime(40)
+cmds.move(30, 0, -20)
+cmds.rotate(0, 90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(50)
+cmds.move(30, 0, -30)
+cmds.rotate(0, 90, 90)
+cmds.setKeyframe()
+
+cmds.currentTime(60)
+cmds.move(30, 5, -29)
+cmds.rotate(0, 90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(70)
+cmds.move(30, 5, -39)
+cmds.rotate(0,90, -90)
+cmds.setKeyframe()
+
+cmds.currentTime(80)
+cmds.move(30, -5, -39)
+cmds.rotate(-90, 90, -90)
+cmds.setKeyframe()
+
+cmds.currentTime(90)
+cmds.move(30, -5, -29)
+cmds.rotate(0, 0, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(100)
+cmds.move(46, -5, -29)
+cmds.rotate(0, 0, 90)
+cmds.setKeyframe()
+
+cmds.currentTime(110)
+cmds.move(46, 0, -29)
+cmds.rotate(90, 0, 90)
+cmds.setKeyframe()
+
+cmds.currentTime(120)
+cmds.move(46, 0, 0)
+cmds.rotate(0, -180, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(130)
+cmds.move(30, 0, 0)
+cmds.rotate(0, -90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(140)
+cmds.move(30, 0, 10)
+cmds.rotate(0, -60, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(150)
+cmds.move(38, 0, 34)
+cmds.rotate(0, -180, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(160)
+cmds.move(32, 0, 34)
+cmds.rotate(0, -90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(170)
+cmds.move(32, 0, 47)
+cmds.rotate(0, 0, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(180)
+cmds.move(53, 0, 47)
+cmds.rotate(0, 90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(190)
+cmds.move(53, 0, 34)
+cmds.rotate(0, 45, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(200)
+cmds.move(65, 0, 30)
+cmds.rotate(0, -45, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(210)
+cmds.move(70, 0, 43)
+cmds.rotate(0, 45, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(220)
+cmds.move(90, 0, 25)
+cmds.rotate(0, 135, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(230)
+cmds.move(84, 0, 19)
+cmds.rotate(0, 225, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(240)
+cmds.move(76, 0, 22)
+cmds.rotate(0, 135, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(250)
+cmds.move(60, 0, 12)
+cmds.rotate(0, 80, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(260)
+cmds.move(65, 0, -11)
+cmds.rotate(0, 135, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(270)
+cmds.move(57, 0, -15)
+cmds.rotate(0, 90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(280)
+cmds.move(57, 0, -39)
+cmds.rotate(0, 0, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(290)
+cmds.move(78, 0, -39)
+cmds.rotate(0, -90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(300)
+cmds.move(78, 0, -17)
+cmds.rotate(0, -135, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(310)
+cmds.move(74, 0, -10)
+cmds.rotate(0, -90, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(320)
+cmds.move(75, 0, 0)
+cmds.rotate(0, 0, 0)
+cmds.setKeyframe()
+
+cmds.currentTime(330)
+cmds.move(100, 0, 0)
+cmds.setKeyframe()
