@@ -134,101 +134,177 @@ cmds.setAttr(helix1 + ".translate", 91, 0, 32)
 #cmds.setAttr(gear1 + ".translate", 9, 0, -15)
 
 # Animate the player movement
-cmds.select(player2)
-cmds.move(7, 0, 0)
+cmds.currentUnit(time="59.94fps")
 
+# First keygrame
+cmds.select(player2)
+cmds.currentTime(1)
+cmds.move(0, 0, 0)
+cmds.setKeyframe()
+
+# Second keyframe
+cmds.currentTime(10)
+cmds.move(7, 0, 0)
+cmds.setKeyframe()
+
+# Third keyframe
+cmds.currentTime(20)
 cmds.rotate(0, 90, 0)
 cmds.move(7, 0, -16)
+cmds.setKeyframe()
 
+cmds.currentTime(30)
 cmds.rotate(0, 0, 0)
 cmds.move(20, 0, -16)
+cmds.setKeyframe()
 
+
+cmds.currentTime(40)
 cmds.rotate(0, 45, 0)
 cmds.move(30, 0, -20)
+cmds.setKeyframe()
 
+cmds.currentTime(50)
 cmds.rotate(0, 90, 0)
 cmds.move(30, 0, -30)
+cmds.setKeyframe()
 
+cmds.currentTime(60)
 cmds.rotate(0, 90, 90)
 cmds.move(30, 5, -29)
+cmds.setKeyframe()
 
+cmds.currentTime(70)
 cmds.rotate(0, 90, 0)
 cmds.move(30, 5, -39)
+cmds.setKeyframe()
 
+cmds.currentTime(80)
 cmds.rotate(0,90, -90)
 cmds.move(30, -5, -39)
+cmds.setKeyframe()
 
+cmds.currentTime(90)
 cmds.rotate(-90, 90, -90)
 cmds.move(30, -5, -29)
+cmds.setKeyframe()
 
+cmds.currentTime(100)
 cmds.rotate(0, 0, 0)
 cmds.move(46, -5, -29)
+cmds.setKeyframe()
 
+cmds.currentTime(110)
 cmds.rotate(0, 0, 90)
 cmds.move(46, 0, -29)
+cmds.setKeyframe()
 
+cmds.currentTime(120)
 cmds.rotate(90, 0, 90)
 cmds.move(46, 0, 0)
+cmds.setKeyframe()
 
+cmds.currentTime(130)
 cmds.rotate(0, -180, 0)
 cmds.move(30, 0, 0)
+cmds.setKeyframe()
 
+cmds.currentTime(140)
 cmds.rotate(0, -90, 0)
 cmds.move(30, 0, 10)
+cmds.setKeyframe()
 
+cmds.currentTime(150)
 cmds.rotate(0, -60, 0)
 cmds.move(38, 0, 34)
+cmds.setKeyframe()
 
+cmds.currentTime(160)
 cmds.rotate(0, -180, 0)
 cmds.move(32, 0, 34)
+cmds.setKeyframe()
 
+cmds.currentTime(170)
 cmds.rotate(0, -90, 0)
 cmds.move(32, 0, 47)
+cmds.setKeyframe()
 
+cmds.currentTime(180)
 cmds.rotate(0, 0, 0)
 cmds.move(53, 0, 47)
+cmds.setKeyframe()
 
+cmds.currentTime(180)
 cmds.rotate(0, 90, 0)
 cmds.move(53, 0, 34)
+cmds.setKeyframe()
 
+cmds.currentTime(190)
 cmds.rotate(0, 45, 0)
 cmds.move(65, 0, 30)
+cmds.setKeyframe()
 
+cmds.currentTime(200)
 cmds.rotate(0, -45, 0)
 cmds.move(70, 0, 43)
+cmds.setKeyframe()
 
+cmds.currentTime(210)
 cmds.rotate(0, 45, 0)
 cmds.move(90, 0, 25)
+cmds.setKeyframe()
 
+cmds.currentTime(220)
 cmds.rotate(0, 135, 0)
 cmds.move(85, 0, 19)
+cmds.setKeyframe()
 
+cmds.currentTime(230)
 cmds.rotate(0, 225, 0)
 cmds.move(76, 0, 24)
+cmds.setKeyframe()
 
+cmds.currentTime(240)
 cmds.rotate(0, 135, 0)
 cmds.move(60, 0, 15)
+cmds.setKeyframe()
 
+cmds.currentTime(250)
 cmds.rotate(0, 80, 0)
 cmds.move(65, 0, -11)
+cmds.setKeyframe()
 
+cmds.currentTime(260)
 cmds.rotate(0, 135, 0)
 cmds.move(57, 0, -15)
+cmds.setKeyframe()
 
+cmds.currentTime(270)
 cmds.rotate(0, 90, 0)
 cmds.move(57, 0, -39)
+cmds.setKeyframe()
 
+cmds.currentTime(280)
 cmds.rotate(0, 0, 0)
 cmds.move(78, 0, -39)
+cmds.setKeyframe()
 
+cmds.currentTime(290)
 cmds.rotate(0, -90, 0)
 cmds.move(78, 0, -17)
+cmds.setKeyframe()
 
+cmds.currentTime(300)
 cmds.rotate(0, 225, 0)
 cmds.move(72, 0, -10)
+cmds.setKeyframe()
 
+cmds.currentTime(310)
 cmds.rotate(0, -90, 0)
 cmds.move(72, 0, 0)
+cmds.setKeyframe()
 
+cmds.currentTime(320)
 cmds.rotate(0, 0, 0)
 cmds.move(100, 0, 0)
+cmds.setKeyframe()
