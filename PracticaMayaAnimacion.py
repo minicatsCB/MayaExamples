@@ -1,9 +1,9 @@
 # Animate the player movement
 cmds.currentUnit(time="59.94fps")
-cmds.playbackOptions(min = 1, max = 6600, by = 1)
+cmds.playbackOptions(min = 0, max = 6700, by = 1)
 
 # First keygrame
-cmds.select(player2)    # Just in case
+cmds.select(player)    # Just in case
 cmds.currentTime(0)
 cmds.move(0, 0, 0)
 cmds.setKeyframe()
