@@ -1,12 +1,12 @@
 from maya import cmds
 cmds.file(new=True, f=True)
 
-player2, _ = cmds.polyPyramid(w=1)
-cmds.setAttr(player2 + ".scale", 3, 3, 3)
-cmds.setAttr(player2 + ".rotate", 0, 0, -90)
-cmds.setAttr(player2 + ".translate", 0, 0, 0)
-cmds.select(player2)
-cmds.setAttr(player2 + ".rotateOrder", 5)    # Set rotate order to ZYX
+player, _ = cmds.polyPyramid(w=1)
+cmds.setAttr(player + ".scale", 3, 3, 3)
+cmds.setAttr(player + ".rotate", 0, 0, -90)
+cmds.setAttr(player + ".translate", 0, 0, 0)
+cmds.select(player)
+cmds.setAttr(player + ".rotateOrder", 5)    # Set rotate order to ZYX
 cmds.makeIdentity(apply=True, t=1, r=1, s=1, n=0, pn=1)    # Put the local axis back to its original position
 
 # Create bounds
